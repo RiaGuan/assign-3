@@ -5,6 +5,8 @@
 	<link rel="stylesheet" href="https://vis-society.github.io/assignments/report.css" />
 </head>
 
+
+
 <body>
 	<header>
 		<h1>
@@ -65,7 +67,7 @@
 				Design Rationale for Sketch 3:
 			</p>
 
-			<ul>
+			<ul class="justified-text">
 				<li>Attempted to simplify the information, only aiming to express the comparison of gender distribution;</li>
 				<li>Redefinition of the coordinate axes, with the number of females and males used as the x and y axes respectively, allows for a clearer representation of gender distribution through the spread of data points (and distinguishes gender by color contrast);</li>
 				<li>A 45-degree line of equality is used to assess the overall situation of gender quantity comparison (if a point lies above this line, it indicates that the number of females is greater than the number of males).</li>
@@ -74,14 +76,17 @@
       <h3>Reflection</h3>
 
       <p>
-		<li><strong>Reflection for the first figure:</strong> Line charts can better differentiate gender opposition, thus addressing the question:"U.S. Population gender balance in 1900 and 2000", but they lack a representation of the total number of people.</li>
-		<li><strong>Reflection for the second figure:</strong>When working on the first two sketches, I felt a little bit constrained and distracted for the reasons as below: 1. the desire to express comparisons across multiple dimensions (even when the focus is on the dichotomy of gender, I always want to add additional information, such as comparisons between different age groups, or between 1900 and 2000, etc.), which may lead to the information conveyed by the chart being not as clear and direct; 2. the feeling that I'm always stuck in the mindset of axes (is it possible to redefine the x/y-axis? Or is there even no need for axes?).</li>
-		<li><strong>Reflection for the third figure:</strong>I have not yet broken free from the conventional mindset of relying on coordinate axes...</li>
-      </p>
+		<ul class="justified-text">
+		<li><strong>Reflection for the first figure:</strong> <br> Line charts are adept at delineating gender balance across various age groups, effectively shedding light on the inquiry: "What was the gender balance within the U.S. population in 1900 versus 2000?" Figure 1 indicates a relatively equitable distribution of genders in 1900. However, by the year 2000, it becomes apparent that the female population surpasses the male population beginning at age 35. Despite the clarity they provide in gender comparison, line charts do not encapsulate the absolute population figures or their distribution, which are critical for a comprehensive understanding of demographic dynamics.</li>
+		<li><strong>Reflection for the second figure:</strong> <br> When working on the first two sketches, I felt a little bit constrained and distracted for the reasons as below:<br> 1. the desire to express comparisons across multiple dimensions (even when the focus is on the dichotomy of gender, I always want to add additional information, such as comparisons between different age groups, or between 1900 and 2000, etc.), which may lead to the information conveyed by the chart being not as clear and direct; <br> 2. the feeling that I'm always stuck in the mindset of axes (is it possible to redefine the x/y-axis? Or is there even no need for axes?).</li>
+		<li><strong>Reflection for the third figure:</strong> <br> "By using male population & female population as the x and y axes, one can more intuitively focus on the gender comparison. Scatter plots also allow for a better comparison of the overall distribution area. The line y=x serves as a reference line, with points above it indicating that the female population is greater than the male population, and vice versa. However, in the process of creating this chart, because the data for the years 1900 and 2000 were overlaid on the same graph, the dimensions were compressed, making it difficult to see the details clearly. Also, since the points are essentially clustered around the y=x reference line, it is also difficult to interpret.And these issues will be optimized in Tableau plotting. Meanwhile, I have not yet broken free from the conventional mindset of relying on coordinate axes...</li>
+    </ul>
+	</p>
 
 	  <p>
-		<li><strong>Summary:</strong>When there is an abundance of information, it becomes particularly important to clarify the research objective (question) and to filter out extraneous information. My question is not overly specific; rather, I am simply interested in examining the population distribution implications of the 'sex' variable. Hence, although all three charts reflect information on gender distribution(gender balance), they also incorporate additional information for support. In terms of thematic expression, I find the third figure to be more definitive and concise, using a scatter plot distribution to demonstrate the relationship between the number of males and females (while filtering out unnecessary variables such as time, total population, age distribution, etc.)—though this may also be one of its drawbacks, as the content expressed is too singular. If I will make the forth hand-drawing figure, my next step will be to explore whether I am overly reliant on the existence of coordinate axes in the process of data analysis visualization, thereby limiting the forms of expression?</li>
-
+		<ul class="justified-text">
+		<li><strong>Summary:</strong> <br> When there is an abundance of information, it becomes particularly important to clarify the research objective (question) and to filter out extraneous information. My question is not overly specific; rather, I am simply interested in examining the population distribution implications of the 'sex' variable. Hence, although all three charts reflect information on gender distribution(gender balance), they also incorporate additional information for support. In terms of thematic expression, I find the third figure to be more definitive and concise, using a scatter plot distribution to demonstrate the relationship between the number of males and females (while filtering out unnecessary variables such as time, total population, age distribution, etc.) Though it still needs refinement to make this chart more readable. If I will make the forth hand-drawing figure, my next step will be to explore whether I am overly reliant on the existence of coordinate axes in the process of data analysis visualization, thereby limiting the forms of expression?</li>
+	  </ul>
 	  </p>
 
 		</section>
@@ -90,14 +95,14 @@
 			<h2>Phase Two: Final Design</h2>
 
 			<figure>
-				<img src="images/tech0.png" alt="U.S. Population Gender Balance, 1900 " style="max-width: 100%;"/>
+				<img src="images/tech01.png" alt="U.S. Population Gender Balance, 1900 " style="max-width: 100%;"/>
 				<figcaption>
 					U.S. Population Gender Balance, 1900 
 				</figcaption>
 			</figure>
 
 			<figure>
-				<img src="images/tech1.png" alt="U.S. Population Gender Balance, 1900 " style="max-width: 100%;"/>
+				<img src="images/tech02.png" alt="U.S. Population Gender Balance, 1900 " style="max-width: 100%;"/>
 				<figcaption>
 					U.S. Population Gender Balance, 2000 
 				</figcaption>
@@ -107,17 +112,21 @@
 
 		<section>
 			<h2>Design Process & Design Decisions</h2>
-
 			<p>
-        DESCRIBE YOUR DESIGN PROCESS AND DECISION DECISIONS HERE.
-      </p>
+				<ul class="justified-text">
+					<li>Based on the third sketch, I refined it using Tableau. I continued to use male population and female population as the x/y axes to better filter out other variables and focus solely on the age comparison. Meanwhile, I calculated a new variable, ratio (= female population/male population), and used the range of the ratio as a condition for color selection. A ratio greater than 1.05 indicates that the number of females significantly exceeds that of males (an unbalanced state), and is represented by a deep blue color; conversely, a deep red color is used for ratios less than 0.95. Ratios between 0.95 and 1.05 are considered balanced. Additionally, the size of the circle reflects the magnitude of the ratio, making it easier to visually compare the number of males and females across different age groups. The comparison of red and blue colors can also infer the overall gender balance distribution within the group. Furthermore, the years 2000 and 1900 were differentiated, with two charts displayed to better showcase the details visually.</li>
+	                <li>Therefore, based on these two charts, we can draw some conclusions about the U.S. population gender balance: In 1900, the gender balance within the 0-20 and 55-80 age ranges was essentially balanced, while between the ages of 25-55, the number of females was significantly less than that of males. However, the gender distribution in 2000 was different, with a more balanced number of males and females before the age of 50, but becoming more imbalanced after 50: the number of males significantly exceeded that of females, surpassing the imbalance observed in the data from 1900.</li>
+				</ul>
+				</p>
 
 
       <h3>Reflection</h3>
 
       <p>
-        WRITE YOUR FINAL REFLECTION HERE.
-      </p>
+		<ul class="justified-text">
+		Throughout the process of data visualization, I often find myself lost in an abundance of data, hoping to convey content across more dimensions, yet this can lead to the main theme I wish to express being captured less clearly. I believe the introduction of Tableau technology enables the generation of intermediary variables (such as ratio), thereby facilitating further filtering and presentation of information, which is difficult to achieve with hand-drawn methods. However, at the same time, the limitations of my own technical skills actually restrict my choice of graphical forms. For instance, in this case, I always wanted to use the Cartesian coordinate system to interpret data, due to my lack of core techniques for producing other types of images. This, to some extent, affects my thinking in visual design.
+	</ul>
+	</p>
 		</section>
 	</main>
 </body>
